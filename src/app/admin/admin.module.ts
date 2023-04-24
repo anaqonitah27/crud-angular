@@ -25,7 +25,19 @@ const routes: Routes = [
       },
       {
         path: 'admin', component: MainComponent
-      }
+      },
+      {
+        path: 'home', component: HomeComponent
+      },
+      {
+        path: 'list', component: ListComponent
+      },
+      {
+        path: 'settings', component: SettingsComponent
+      },
+      {
+        path: 'logout', component: LogoutComponent
+      },
     ]
   },
 ]

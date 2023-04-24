@@ -5,16 +5,16 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>CRUD version</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="/admin"> 
+      <a mat-list-item href="/admin/home" > 
         <mat-icon aria-hidden="false"  color="primary" aria-label="Example home icon" fontIcon="home"></mat-icon> Home
       </a>
-      <a mat-list-item href="/admin"> 
+      <a mat-list-item href="/admin/list"> 
         <mat-icon aria-hidden="false" color="primary" aria-label="Example home icon" fontIcon="list"></mat-icon> List
       </a>
-      <a mat-list-item href="/admin"> 
+      <a mat-list-item href="/admin/settings"> 
         <mat-icon aria-hidden="false" color="primary" aria-label="Example home icon" fontIcon="settings"></mat-icon> Settings
       </a>
-      <a mat-list-item href="/admin"> 
+      <a mat-list-item href="/admin/logout"> 
         <mat-icon aria-hidden="false" color="primary" aria-label="Example home icon" fontIcon="logout"></mat-icon> Logout
       </a>
     </mat-nav-list>
@@ -31,5 +31,6 @@
       <span>Belajar Angular</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
