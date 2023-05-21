@@ -53,6 +53,15 @@
       "price": 3000000,
       "details": "soon",
       "id": 6
+    },
+    {
+      "productName": "Camera Laptop",
+      "category": "Laptop",
+      "date": "2023-04-30T17:00:00.000Z",
+      "favoriteBrand": "Asus",
+      "price": 300000,
+      "details": "not bad",
+      "id": 7
     }
   ],
   "comments": [
