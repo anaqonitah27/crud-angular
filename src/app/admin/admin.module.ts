@@ -8,8 +8,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule, Routes } from '@angular/router';
-import { SettingsComponent } from './settings/settings.component';
-import { LogoutComponent } from './logout/logout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatInputModule } from '@angular/material/input';
 
 const routes: Routes = [
   {
@@ -17,18 +21,7 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: 'admin',
-        redirectTo: 'admin/home',
-        pathMatch: 'full',
-      },
-      {
-        path: 'admin', component: MainComponent
-      },
-      {
-        path: 'settings', component: SettingsComponent
-      },
-      {
-        path: 'logout', component: LogoutComponent
+        path: 'main', component: MainComponent
       },
     ]
   },
@@ -37,8 +30,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     MainComponent,
-    SettingsComponent,
-    LogoutComponent
   ],
   imports: [
     CommonModule,
@@ -49,6 +40,12 @@ const routes: Routes = [
     MatIconModule,
     MatListModule,
     RouterModule.forChild(routes),
+    HttpClientModule,
+    MatFormFieldModule,
+    MatTableModule ,
+    MatPaginatorModule,
+    MatSortModule,
+    MatInputModule
   ]
 })
 export class AdminModule { }

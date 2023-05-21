@@ -5,18 +5,12 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar [style.marginLeft.px]="8">ANGULAR CLI 15</mat-toolbar>    
     <mat-nav-list>
+      <!-- MENU LIST PRODUCT -->
+       <mat-icon [style.marginLeft.px]="20" aria-hidden="false" [style.marginTop.px]="20"color="warn" fontIcon="desktop_windows"></mat-icon>       
+        <a mat-button href="" [style.marginLeft.px]="10" color="warn" mat-raised-button>Show Data's</a>
 			<!-- MENU ADD PRODUCT -->
        <mat-icon [style.marginLeft.px]="20" [style.marginTop.px]="30" aria-hidden="false" color="warn" fontIcon="create_new_folder" ></mat-icon>          
-			 <a mat-button [style.marginLeft.px]="10" color="warn" mat-raised-button (click)="openDialog()">Add Product</a>
-			<!-- MENU LIST PRODUCT -->
-       <mat-icon [style.marginLeft.px]="20" aria-hidden="false" [style.marginTop.px]="20"color="warn" fontIcon="desktop_windows"></mat-icon>       
-				<a mat-button href="/settings" [style.marginLeft.px]="10" color="warn" mat-raised-button>Settings</a>
-      <!-- <a mat-list-item href="/settings"> 
-        <mat-icon aria-hidden="false" color="warn" aria-label="Example home icon" fontIcon="settings"></mat-icon> Settings
-      </a>
-      <a mat-list-item href="/logout"> 
-        <mat-icon aria-hidden="false" color="warn" aria-label="Example home icon" fontIcon="logout"></mat-icon> Logout
-      </a> -->
+			 <a mat-button [style.marginLeft.px]="10" color="warn" mat-raised-button (click)="openDialog()">Create Data</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -40,6 +34,79 @@
       </button>
     </mat-toolbar>
     <!-- Add Content Here -->
+    
+    <div class="container">
+      <div style="margin-top: 10pxx;">
+        <mat-form-field>
+          <mat-label>Filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+        </mat-form-field>
+        
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" matSort>
+        
+            <!-- ID Column -->
+            <ng-container matColumnDef="productName">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Name </th>
+              <td mat-cell *matCellDef="let row"> {{row.productName}} </td>
+            </ng-container>
+        
+            <!-- Progress Column -->
+            <ng-container matColumnDef="category">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+              <td mat-cell *matCellDef="let row"> {{row.category}} </td>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+              <td mat-cell *matCellDef="let row"> {{row.date | date}} </td>
+            </ng-container>
+        
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="favoriteBrand">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Favorite Brand </th>
+              <td mat-cell *matCellDef="let row"> {{row.favoriteBrand}} </td>
+            </ng-container>
+    
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="price">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+              <td mat-cell *matCellDef="let row"> {{row.price | currency}} </td>
+            </ng-container>
+    
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="details">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Details </th>
+              <td mat-cell *matCellDef="let row"> {{row.details}} </td>
+            </ng-container>
+
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="action">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+              <td mat-cell *matCellDef="let row">  
+                <button mat-icon-button color="primary" (click)="editProduct(row)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="accent">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+            </tr>
+          </table>
+        
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+        </div>    
+      </div>
+    </div>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

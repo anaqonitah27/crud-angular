@@ -1,0 +1,68 @@
+{
+  "product": [
+    {
+      "productName": "Lenovo Ideapad",
+      "category": "option2",
+      "date": "2023-05-09T17:00:00.000Z",
+      "favoriteBrand": "Lenovo",
+      "price": 20000000,
+      "details": "good",
+      "id": 1
+    },
+    {
+      "productName": "Asus ROG",
+      "category": "Laptop",
+      "date": "2023-05-04T17:00:00.000Z",
+      "favoriteBrand": "Asus",
+      "price": 18000000,
+      "details": "laptop",
+      "id": 2
+    },
+    {
+      "productName": "apple",
+      "category": "Handphone",
+      "date": "2023-05-08T17:00:00.000Z",
+      "favoriteBrand": "Apple",
+      "price": 15000000,
+      "details": "mantap",
+      "id": 3
+    },
+    {
+      "productName": "Ipad",
+      "category": "Laptop",
+      "date": "2023-05-02T17:00:00.000Z",
+      "favoriteBrand": "Apple",
+      "price": 12000000,
+      "details": "sip",
+      "id": 4
+    },
+    {
+      "productName": "Microphone HP",
+      "category": "Microphone",
+      "date": "2023-05-19T17:00:00.000Z",
+      "favoriteBrand": "Hp",
+      "price": 400000,
+      "details": "kurang sip",
+      "id": 5
+    },
+    {
+      "productName": "HP laptop",
+      "category": "Laptop",
+      "date": "2023-05-24T17:00:00.000Z",
+      "favoriteBrand": "Hp",
+      "price": 3000000,
+      "details": "soon",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
