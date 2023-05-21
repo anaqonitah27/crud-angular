@@ -19,7 +19,7 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: '',
+        path: 'admin',
         redirectTo: 'admin/home',
         pathMatch: 'full',
       },

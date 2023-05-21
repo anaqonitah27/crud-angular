@@ -3,20 +3,24 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>CRUD version</mat-toolbar>
+    <mat-toolbar>CRUD Angular
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </mat-toolbar>    
     <mat-nav-list>
-      <a mat-list-item href="/admin/home"> 
-        <mat-icon aria-hidden="false"  color="primary" aria-label="Example home icon" fontIcon="home"></mat-icon> Home
+      <a mat-list-item href="/home"> 
+        <mat-icon aria-hidden="false"  color="primary" fontIcon="create_new_folder" ></mat-icon> Home
       </a>
-      <a mat-list-item href="/admin/list"> 
-        <mat-icon aria-hidden="false" color="primary" aria-label="Example home icon" fontIcon="list"></mat-icon> List
+      <a mat-list-item href="/list"> 
+        <mat-icon aria-hidden="false" color="primary" fontIcon="desktop_windows"></mat-icon> Show List
       </a>
-      <a mat-list-item href="/admin/settings"> 
+      <!-- <a mat-list-item href="/settings"> 
         <mat-icon aria-hidden="false" color="primary" aria-label="Example home icon" fontIcon="settings"></mat-icon> Settings
       </a>
-      <a mat-list-item href="/admin/logout"> 
+      <a mat-list-item href="/logout"> 
         <mat-icon aria-hidden="false" color="primary" aria-label="Example home icon" fontIcon="logout"></mat-icon> Logout
-      </a>
+      </a> -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -26,9 +30,14 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()">
-        <mat-icon aria-label="Side nav toggle icon">Menu</mat-icon>
+        <mat-icon aria-hidden="false" color="white" aria-label="Example home icon" fontIcon="list"></mat-icon>
       </button>
-      <span>About Angular</span>
+      <span>Click Menu</span>
+      
+    <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
