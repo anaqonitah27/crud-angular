@@ -10,7 +10,7 @@
   background: inherit;
 }
 
-.mat-toolbar.mat-primary {
+.mat-toolbar.mat-warn {
   position: sticky;
   top: 5;
   z-index: 1;

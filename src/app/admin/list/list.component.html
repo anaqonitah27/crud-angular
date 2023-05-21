@@ -1,6 +1,45 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav-content>
-    <!-- Add Content Here -->
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<h1 mat-dialog-title [style.marginTop.px]="10">Add Product Here</h1>
+<div mat-dialog-content>
+  <mat-form-field [style.marginTop.px]="5" appearance="outline">
+    <mat-label>Product Name</mat-label>
+    <input matInput placeholder="Product Name">
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+    <mat-label>Product Category</mat-label>
+    <mat-select [disabled]="disableSelect.value">
+      <mat-option value="option1">Handphone</mat-option>
+      <mat-option value="option2">Laptop</mat-option>
+      <mat-option value="option3">Microphone</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field [style.marginBottom.px]="20">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <label id="example-radio-group-label">Pick Your Favorite Brand</label>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    [(ngModel)]="favoriteBrand">
+    <mat-radio-button class="example-radio-button" *ngFor="let brand of brand" [value]="brand">
+      {{brand}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <div [style.marginBottom.px]="20" [style.marginLeft.px]="10" >Your favorite brand is: {{favoriteBrand}}</div>
+
+  <mat-form-field [style.marginTop.px]="5" appearance="outline">
+    <mat-label>Price of the Product</mat-label>
+    <input matInput placeholder="Product Price" type="number">
+  </mat-form-field>
+
+  <mat-form-field [style.marginTop.px]="5" appearance="outline">
+    <mat-label>Product details</mat-label>
+    <textarea matInput placeholder="Product details"></textarea>
+  </mat-form-field>
+</div>

@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
-
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-list',
@@ -10,12 +7,10 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
+  constructor() {}
+  
+  disableSelect = new FormControl(false);
+  favoriteBrand!: string;
+  brand: string[] = ['Lenovo', 'Apple', 'Asus', 'Hp'];
 }
