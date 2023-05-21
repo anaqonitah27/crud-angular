@@ -8,7 +8,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule, Routes } from '@angular/router';
-import { ListComponent } from './list/list.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LogoutComponent } from './logout/logout.component';
 
@@ -49,7 +48,7 @@ const routes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ]
 })
 export class AdminModule { }
