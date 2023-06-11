@@ -31,7 +31,11 @@ export class MainComponent implements OnInit{
   openDialog() {
     this.list.open(ListComponent, {
         width: '30%'
-    });
+    }).afterClosed().subscribe(val=>{
+      if(val == 'save'){
+        this.getAllProduct()
+      }
+    })
   }
 
   getAllProduct(){
@@ -73,6 +77,10 @@ export class MainComponent implements OnInit{
     this.dialog.open(ListComponent,{
       width: '30%',
       data: row
+    }).afterClosed().subscribe(val=>{
+      if(val == 'update'){
+        this.getAllProduct()
+      }
     })
   }
 }
