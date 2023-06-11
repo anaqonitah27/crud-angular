@@ -42,14 +42,14 @@ There is a pagination feature to set the amount of data on the page.
 
 ----
 
-## Add Data Product
+## Create / Add Data Product
 The add page functions to add data to the product which can later be displayed in a table
 
 ![](src/app/img/addData.jpeg)
 <br>
 
 ---
-## Alert Success Added
+## Read Alert Success Added
 Alert will appear if the data has been successfully filled in and clicked save
 
 ![](src/app/img/alertSuccess.jpeg)
@@ -58,3 +58,27 @@ The following is the result of the input data
 
 ![](src/app/img/lastData.jpeg)
 <br>
+
+---
+## Update Data Product
+You can update product data by clicking on the pencil image on the right, as shown in the box here
+
+![](src/app/img/editProduct.jpeg)
+<br>
+
+---
+## Alert Success Update
+when you click on the pencil image, pre-existing data will appear and ready to be edited, when finished click update
+
+![](src/app/img/update.jpeg)
+
+The following is the result of the update data
+
+![](src/app/img/alertupdate.jpeg)
+<br>
+
+---
+## Delete Data Product
+when you click on the trash image, the data you select will automatically be deleted
+
+![](src/app/img/deleteProduct.jpeg)
