@@ -83,4 +83,15 @@ export class MainComponent implements OnInit{
       }
     })
   }
+
+  deleteProduct(id: number){
+    this.api.deleteProduct(id).subscribe({
+      next:(res)=>{
+        alert("Product Deleted Successfully")
+      },
+      error:()=>{
+        alert("Error while deleting the product")
+      }
+    })
+  }
 }

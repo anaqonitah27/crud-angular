@@ -19,42 +19,6 @@
       "id": 2
     },
     {
-      "productName": "apple",
-      "category": "Handphone",
-      "date": "2023-05-08T17:00:00.000Z",
-      "favoriteBrand": "Lenovo",
-      "price": 15000000,
-      "details": "mantap",
-      "id": 3
-    },
-    {
-      "productName": "Ipad",
-      "category": "Laptop",
-      "date": "2023-05-02T17:00:00.000Z",
-      "favoriteBrand": "Apple",
-      "price": 12000000,
-      "details": "sip",
-      "id": 4
-    },
-    {
-      "productName": "Microphone HP",
-      "category": "Microphone",
-      "date": "2023-05-19T17:00:00.000Z",
-      "favoriteBrand": "Hp",
-      "price": 400000,
-      "details": "kurang sip",
-      "id": 5
-    },
-    {
-      "productName": "HP laptop",
-      "category": "Laptop",
-      "date": "2023-05-24T17:00:00.000Z",
-      "favoriteBrand": "Hp",
-      "price": 3000000,
-      "details": "soon",
-      "id": 6
-    },
-    {
       "productName": "Camera Laptop",
       "category": "Laptop",
       "date": "2023-04-30T17:00:00.000Z",
@@ -62,15 +26,6 @@
       "price": 300000,
       "details": "not bad",
       "id": 7
-    },
-    {
-      "productName": "Lenovo V20",
-      "category": "Handphone",
-      "date": "2023-06-01T17:00:00.000Z",
-      "favoriteBrand": "Lenovo",
-      "price": 200000,
-      "details": "good",
-      "id": 8
     },
     {
       "productName": "Laptop New Apple",
