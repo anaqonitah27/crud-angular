@@ -17,15 +17,6 @@
       "price": 18000000,
       "details": "laptop",
       "id": 2
-    },
-    {
-      "productName": "Iphone",
-      "category": "Microphone",
-      "date": "2023-09-22T17:00:00.000Z",
-      "favoriteBrand": "Apple",
-      "price": 20000000,
-      "details": "Good",
-      "id": 3
     }
   ],
   "comments": [
